@@ -14,3 +14,9 @@ class super:
         return self.funced
     def this(self, func):
         self.functions.append(func)
+        
+S = super()
+S.this(print)
+S.this(add)
+S.this(type)
+print(S.run(1,2))
