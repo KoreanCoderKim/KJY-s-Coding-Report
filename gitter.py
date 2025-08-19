@@ -1,10 +1,11 @@
 class super:
-    value = None
-    def run(self, func):
-        return func(self.value)
-    def this(self, v):
-        self.value = v
+    functions = []
+    def run(self, idx, v):
+        return self.functions[idx](v)
+    def this(self, func):
+        self.functions.append(func)
 
 S = super()
-S.this(5)
-print(S.run(type))
+S.this(type)
+S.this(print)
+S.run(1, S.run(0, "str"))
