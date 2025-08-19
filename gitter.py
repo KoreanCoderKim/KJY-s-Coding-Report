@@ -1,7 +1,10 @@
 class super:
-    functions = []
-    funced = []
-    def run(self, idx, *args, **kwargs):
+    functions = None
+    funced = None
+    def __init__(self):
+        self.functions = []
+        self.funced = []
+    def run(self, *args, **kwargs):
         for f in self.functions:
            try:
               f(*args,**kwargs)
