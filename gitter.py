@@ -4,7 +4,7 @@ class super:
     def run(self, idx, *args, **kwargs):
         for f in self.functions:
            try:
-             f(*args,**kwargs)
+              f(*args,**kwargs)
               self.funced.append(str(f))
             except Exception as e:
               pass
